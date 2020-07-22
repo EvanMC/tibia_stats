@@ -12,7 +12,7 @@ app.use(express.static('./client/tibia-azure-example/build/'));
 app.use('/api/thoughts/', require('./server/routes/thoughts-route'));
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html',{root:__dirname + '/client/tibia-azure-example/build/'});
+    res.sendFile('index.html',{root:'./client/tibia-azure-example/build/'});
 });
 
 const {PORT} = process.env;
